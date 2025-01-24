@@ -55,7 +55,7 @@
 
         .message {
             margin-top: 10px;
-            font-size: 14px;
+            font-size: 22px;
         }
     </style>
 </head>
@@ -71,20 +71,16 @@
         const FIXED_NUMBER = "534150343";
 
         function login() {
-            const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const message = document.getElementById('message');
 
             if (password === FIXED_NUMBER) {
                 message.style.color = 'green';
-                message.textContent = `شفرة فتح الباب هتلاقوها في ابصالية الأحد (Ⲁⲓⲕⲱϯ 'Ⲛⲥⲱⲕ).}!`;
+                message.textContent = `شفرة فتح الباب هتلاقوها في ابصالية الأحد (Ⲁⲓⲕⲱϯ 'Ⲛⲥⲱⲕ).`;
             } else {
                 message.style.color = 'red';
                 message.textContent = 'دخل الكود الصحيح المكون من 9 ارقام';
             }
-
-
-            
         }
     </script>
 </body>
