@@ -61,7 +61,7 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>Ⲕⲟⲡⲧⲁⲝⲓⲥ</h1>
+        <h1>Login</h1>
         <input type="password" id="password" placeholder="Enter Password">
         <button onclick="login()">Login</button>
         <div class="message" id="message"></div>
@@ -76,23 +76,15 @@
             const message = document.getElementById('message');
 
 
-            if (password.length() != 9){
+
+            if (password === FIXED_NUMBER) {
+                message.style.color = 'green';
+                message.textContent = `شفرة فتح الباب هتلاقوها في ابصالية الأحد (Ⲁⲓⲕⲱϯ 'Ⲛⲥⲱⲕ).}!`;
+
+            } else (password !== "9") {
                 message.style.color = 'red';
-                message.textContent = 'دخل الكود المكون من 9 ارقام';
-            }
-                
-              else{          
-                if (password === FIXED_NUMBER) {
-                    message.style.color = 'green';
-                    message.textContent = `شفرة فتح الباب هتلاقوها في ابصالية الأحد (Ⲁⲓⲕⲱϯ 'Ⲛⲥⲱⲕ).!`;
-                } 
-    
-                         
-                else {
-                    message.style.color = 'red';
-                    message.textContent = '';
-                }
-              }
+                message.textContent = 'دخل الكود الصحيح مكون من 9 ارقام';
+            } 
         }
     </script>
 </body>
